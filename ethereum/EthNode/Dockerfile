@@ -3,7 +3,7 @@ FROM ethereum/client-go:stable
 RUN apk add --no-cache curl
 
 
-COPY ETHGenesis.json ETHGenesis.json
+COPY ethereum/EthNode/ETHGenesis.json ETHGenesis.json
 
 RUN geth --identity "GravityTestnet" \
     --nodiscover \
