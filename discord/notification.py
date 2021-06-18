@@ -8,7 +8,7 @@ from discord_webhook import DiscordWebhook, DiscordEmbed
 webhook = DiscordWebhook(url=url)
 
 OS = os.environ["RUNNER_OS"]
-NAME = os.environ["GITHUB_WORKFLOW"]
+NAME = os.environ["GITHUB_RUN_ID"]
 COMMIT = os.environ["GITHUB_SHA"]
 ID = os.environ["GITHUB_JOB"]
 EVENT = os.environ["GITHUB_EVENT_NAME"]
