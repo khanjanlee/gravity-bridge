@@ -1,10 +1,10 @@
 
-
-url = "https://discord.com/api/webhooks/855349363277692969/8upsNV_Hr74JuLmdfH6MOBzY8y5BUISXoa7jdkUiNYQ3Z9XmhBqIRkQP3sGp4Pmi7-UL"
 from datetime import datetime
 import os
 from discord_webhook import DiscordWebhook, DiscordEmbed
 
+
+url = os.environ["WEB_URL"]
 webhook = DiscordWebhook(url=url)
 
 OS = os.environ["RUNNER_OS"]

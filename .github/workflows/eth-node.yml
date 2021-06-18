@@ -35,5 +35,7 @@ jobs:
       - name: Install Notification module
         run: pip install discord-webhook
       - name: send status to discord
+        env:
+          WEB_URL: ${{ secrets.WEB_URL }}
         run: |
               python discord/notification.py
