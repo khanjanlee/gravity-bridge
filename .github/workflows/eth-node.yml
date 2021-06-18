@@ -28,9 +28,9 @@ jobs:
         run: docker buildx build --tag leeway302/gravity_eth_image1 --file ethereum/EthNode/Dockerfile --platform linux/amd64 --cache-from leeway302/gravity_eth_image1:cache --cache-to leeway302/gravity_eth_image1:cache --push --progress tty .
       
       - name: setup python
-            uses: actions/setup-python@v2
-            with:
-              python-version: 3.9 #install the python needed
+        uses: actions/setup-python@v2
+        with:
+            python-version: 3.9
       
       - name: Install Notification module
         run: pip install discord-webhook
