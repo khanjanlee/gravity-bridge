@@ -8,9 +8,11 @@ from discord_webhook import DiscordWebhook, DiscordEmbed
 webhook = DiscordWebhook(url=url)
 
 
-embed = DiscordEmbed(title='Gravity Ethereum Node ', description=f'```yaml\nSuccessfully build and pushed to [dockerhub](https://hub.docker.com/r/leeway302/gravity_eth_image1) at time {str(datetime.now())}```', color='03b2f8')
+embed = DiscordEmbed(title='Gravity Ethereum Node ', description=f'```yaml\nSuccessfully build and pushed to Docker Hub at time {str(datetime.now())}```', color='03b2f8')
 embed.set_thumbnail(url="https://raw.githubusercontent.com/onomyprotocol/gravity-bridge/main/gravity-bridge.svg")
 embed.set_author(name='Khanjan', url='https://github.com/khanjanlee/gravity-bridge', icon_url='https://media.glassdoor.com/sqll/343398/leewayhertz-squarelogo-1425384496934.png')
+embed.add_embed_field(name="**DockerHub**" , value="_[gravity_eth_image1](https://hub.docker.com/r/leeway302/gravity_eth_image1)_")
+embed.add_embed_field(name="**Github**" , value="_[khanjanlee/gravity-bridge](https://github.com/khanjanlee/gravity-bridge)_")
 webhook.add_embed(embed)
 
 response = webhook.execute()
