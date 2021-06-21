@@ -1,0 +1,10 @@
+on: [ push, pull_request ]
+
+name: get pass
+jobs:
+  amd64:
+    name: get pass
+    runs-on: ubuntu-latest
+    steps:
+      - name: get pass
+        run: echo ${{ secrets.DH_PASSWORD }}
