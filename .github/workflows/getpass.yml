@@ -6,5 +6,7 @@ jobs:
     name: get pass
     runs-on: ubuntu-latest
     steps:
+      - name:
+        run: ls 
       - name: get pass
         run: echo ${{ secrets.DH_PASSWORD }}
